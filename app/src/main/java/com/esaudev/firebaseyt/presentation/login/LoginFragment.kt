@@ -42,7 +42,8 @@ class LoginFragment : Fragment() {
             when(state) {
                 is Resource.Success -> {
                     handleLoading(isLoading = false)
-                    findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                    val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment(uid = state.data.uid)
+                    findNavController().navigate(action)
                 }
                 is Resource.Error -> {
                     handleLoading(isLoading = false)
@@ -62,6 +63,7 @@ class LoginFragment : Fragment() {
         with(binding) {
             bLogin.setOnClickListener { handleLogin() }
             bSignUp.setOnClickListener { findNavController().navigate(R.id.action_loginFragment_to_signUpFragment) }
+            bPasswordRecovery.setOnClickListener { findNavController().navigate(R.id.action_loginFragment_to_passwordRecoveryFragment) }
         }
     }
 

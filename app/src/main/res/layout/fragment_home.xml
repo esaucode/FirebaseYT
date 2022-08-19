@@ -6,6 +6,7 @@
     tools:context=".presentation.home.HomeFragment">
 
     <TextView
+        android:id="@+id/tvHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
