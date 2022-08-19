@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FirebaseYT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login__login_button">Iniciar sesion</string>
+    <string name="login__signup_button">Registrarme</string>
+    <string name="login__password_recovery_button">Recuperar contraseña</string>
+    <string name="login__email_hint">Correo electronico</string>
+    <string name="login__password_hint">Contraseña</string>
+    <string name="login__signup_header">Registrarse</string>
+    <string name="login__password_recovery_header">¿Olvidaste tu contraseña?</string>
+</resources>
