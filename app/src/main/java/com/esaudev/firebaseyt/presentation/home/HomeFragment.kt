@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
     private fun initObservers() {
         viewModel.addNoteState.observe(viewLifecycleOwner) { state ->
             when(state) {
-                is Resource.Success -> getNotes()
+                is Resource.Success -> Unit
                 is Resource.Error -> Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT)
                     .show()
                 else -> Unit
@@ -54,7 +54,7 @@ class HomeFragment : Fragment() {
         }
         viewModel.deleteNoteState.observe(viewLifecycleOwner) { state ->
             when(state) {
-                is Resource.Success -> getNotes()
+                is Resource.Success -> Unit
                 is Resource.Error -> Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT)
                     .show()
                 else -> Unit

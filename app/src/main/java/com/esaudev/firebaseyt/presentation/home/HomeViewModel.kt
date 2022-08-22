@@ -8,6 +8,7 @@ import com.esaudev.firebaseyt.domain.model.Note
 import com.esaudev.firebaseyt.domain.model.User
 import com.esaudev.firebaseyt.domain.usecase.FirebaseAddNoteUseCase
 import com.esaudev.firebaseyt.domain.usecase.FirebaseDeleteNoteUseCase
+import com.esaudev.firebaseyt.domain.usecase.FirebaseGetAllNotesRealTimeUseCase
 import com.esaudev.firebaseyt.domain.usecase.FirebaseGetAllNotesUseCase
 import com.esaudev.firebaseyt.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -20,7 +21,8 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
     private val addNoteUseCase: FirebaseAddNoteUseCase,
     private val deleteNoteUseCase: FirebaseDeleteNoteUseCase,
-    private val getAllNotesUseCase: FirebaseGetAllNotesUseCase
+    private val getAllNotesUseCase: FirebaseGetAllNotesUseCase,
+    private val getAllNotesRealTimeUseCase: FirebaseGetAllNotesRealTimeUseCase
 ): ViewModel() {
 
     private val _noteListState: MutableLiveData<Resource<List<Note>>> = MutableLiveData()
@@ -37,7 +39,7 @@ class HomeViewModel @Inject constructor(
 
     fun getAllNotes() {
         viewModelScope.launch {
-            getAllNotesUseCase().onEach {
+            getAllNotesRealTimeUseCase().onEach {
                 _noteListState.value = it
             }.launchIn(viewModelScope)
         }
