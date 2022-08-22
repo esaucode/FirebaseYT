@@ -9,4 +9,7 @@
     <string name="login__password_hint">Contraseña</string>
     <string name="login__signup_header">Registrarse</string>
     <string name="login__password_recovery_header">¿Olvidaste tu contraseña?</string>
+    <string name="dialog__add_note_header">Ingrese su nota</string>
+    <string name="dialog__note_hint">Nota</string>
+    <string name="dialog__add_note_button">Agregar</string>
 </resources>
