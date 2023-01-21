@@ -1,13 +1,13 @@
-# Firebase & Android 
+# Firebase & Android
 
-En este repositorio vamos a ver como utilizar Firebase en nuestros proyectos de Android, utilizando las mejores practicas, MVVM y clean arquitecture.
+In this repository we are going to see how to use Firebase in our Android projects, using the best practices, MVVM and clean architecture.
 
-#### Guia de contenido:
+#### Content Guide:
 
-* Parte 1: Conexión a Firebase y primeros pasos para implementar login con correo electrónico y contraseña
-* Parte 2: Uso de Firestore para gestionar datos de usuarios e implementacion de recuperación de contraseña
-* Parte 3: Montamos un CRUD sencillo
-* Parte 4: Leemos los datos de Firestore en TIEMPO REAL
+* Part 1: Connection to Firebase and first steps to implement login with email and password
+* Part 2: Using Firestore to manage user data and implementing password recovery
+* Part 3: We set up a simple CRUD
+* Part 4: We read the data from Firestore in REAL TIME
 
 #### Videos:
 * Parte 1: https://youtu.be/YOBJNawutXw
